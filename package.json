@@ -8,8 +8,8 @@
     "server"
   ],
   "scripts": {
-    "start:frontend": "cd frontend && ng serve",
-    "start:backend": "cd backend && node server.js",
+    "start:frontend": "cd client && ng serve",
+    "start:server": "cd server && node server.js",
     "dev": "npm run start:frontend & npm run start:backend"
   },
   "repository": {
