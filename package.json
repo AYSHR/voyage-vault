@@ -1,0 +1,26 @@
+{
+  "name": "voyage-vault",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "start:frontend": "cd frontend && ng serve",
+    "start:backend": "cd backend && node server.js",
+    "dev": "npm run start:frontend & npm run start:backend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AYSHR/voyage-vault.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AYSHR/voyage-vault/issues"
+  },
+  "homepage": "https://github.com/AYSHR/voyage-vault#readme",
+  "description": ""
+}
