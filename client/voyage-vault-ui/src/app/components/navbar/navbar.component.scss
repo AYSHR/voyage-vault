@@ -1,0 +1,11 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  height: 30px;
+  padding: 0.625rem 1.25rem;
+
+  .actions {
+    display: flex;
+    gap: 1.25rem;
+  }
+}
