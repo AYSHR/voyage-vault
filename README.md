@@ -1,6 +1,6 @@
 # Voyage Vault
 
-[![Angular Version](https://img.shields.io/badge/Angular-19-red.svg)](https://angular.io/)
+[![Angular Version](https://img.shields.io/badge/Angular-21-red.svg)](https://angular.io/)
 [![Google Maps](https://img.shields.io/badge/Google%20Maps-API-green.svg)](https://developers.google.com/maps)
 [![Google Gemini](https://img.shields.io/badge/Google%20Gemini-2.5%20Flash%20Lite-blue.svg)](https://ai.google.dev/)
 
@@ -24,7 +24,7 @@ Before getting started, ensure the following tools are installed:
 
 - **Node.js**: Version 22.x.x or higher
 - **npm**: Version 10.x.x or higher
-- **Angular CLI**: Compatible with Angular version 19.x.x
+- **Angular CLI**: Compatible with Angular version 21.x.x
 
 To verify your installations, run:
 
