@@ -15,13 +15,34 @@ interface ApiOptions {
 export class ApiService {
   private http = inject(HttpClient);
 
-  postServiceCall<T>(
+  getServiceCall<T>(
     url: string,
-    body?: any,
-    options: ApiOptions = {}
+    params?: Record<string, any>,
+    options: ApiOptions = {},
+    nocb?: boolean
   ): Observable<T> {
-    const httpOptions = this.makeHttpOptions(options);
-    return this.http.post<T>(url, body, httpOptions);
+    const queryParams = this.createHttpParams(params, nocb);
+    const httpOptions = this.makeHttpOptions(options, queryParams);
+
+    return this.http.get<T>(url, httpOptions);
+  }
+
+  private createHttpParams( params?: Record<string, any>, nocb?: boolean): HttpParams {
+    let queryParams = new HttpParams();
+
+    if (params) {
+      Object.keys(params).forEach((key) => {
+        if (Array.isArray(params[key])) {
+          params[key].forEach((value: any) => {
+            queryParams = queryParams.append(key, value);
+          });
+        } else {
+          queryParams = queryParams.set(key, params[key]);
+        }
+      });
+    }
+
+    return queryParams;
   }
 
   private makeHttpOptions( options: ApiOptions = {}, params?: HttpParams): Record<string, any> {

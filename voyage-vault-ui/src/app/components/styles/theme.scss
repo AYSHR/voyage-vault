@@ -1,0 +1,45 @@
+@use './tokens.scss' as *;
+
+:root {
+  --background: #{$background-light};
+  --background-secondary: #{$background-secondary-light};
+  --text-primary: #{$text-primary-light};
+  --border: #{$border-light};
+  --button-background: #{$button-background-light};
+  --button-background-hover: #{$button-background-hover-light};
+  --button-background-disabled: #{$button-background-disabled-light};
+  --message-user-background: #{$message-user-background-light};
+  --message-user-text: #{$message-user-text-light};
+  --message-bot-background: #{$message-bot-background-light};
+  --message-bot-text: #{$message-bot-text-light};
+  --message-bot-border: #{$message-bot-border-light};
+  --input-background: #{$input-background-light};
+  --input-text: #{$input-text-light};
+  --input-placeholder: #{$input-placeholder-light};
+  --input-border: #{$input-border-light};
+  --input-border-focus: #{$input-border-focus-light};
+  --icon: #{$icon-light};
+  --timestamp: #{$timestamp-light};
+}
+
+[data-theme="dark"] {
+  --background: #{$background-dark};
+  --background-secondary: #{$background-secondary-dark};
+  --text-primary: #{$text-primary-dark};
+  --border: #{$border-dark};
+  --button-background: #{$button-background-dark};
+  --button-background-hover: #{$button-background-hover-dark};
+  --button-background-disabled: #{$button-background-disabled-dark};
+  --message-user-background: #{$message-user-background-dark};
+  --message-user-text: #{$message-user-text-dark};
+  --message-bot-background: #{$message-bot-background-dark};
+  --message-bot-text: #{$message-bot-text-dark};
+  --message-bot-border: #{$message-bot-border-dark};
+  --input-background: #{$input-background-dark};
+  --input-text: #{$input-text-dark};
+  --input-placeholder: #{$input-placeholder-dark};
+  --input-border: #{$input-border-dark};
+  --input-border-focus: #{$input-border-focus-dark};
+  --icon: #{$icon-dark};
+  --timestamp: #{$timestamp-dark};
+}
