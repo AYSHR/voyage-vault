@@ -2,17 +2,19 @@ import { inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ApiService } from '../../services/api.service';
 import { PlanResponse } from './chat.constants';
+import { StateService } from '../../services/state.service';
 
 @Injectable()
 export class ChatService {
   private apiService = inject(ApiService);
+  private stateService = inject(StateService);
 
-  sendMessageRequest(message: string, days: number = 5): Observable<PlanResponse> {
-    const url = 'http://localhost:3001/api/plan';
+  sendMessageRequest(message: string): Observable<PlanResponse[]> {
+    const destination = this.stateService.locationName();
+    const duration = this.stateService.duration();
+    const url = `http://localhost:3001/api/plan/${destination}/${duration}`;
+    const queryParams = message ? { message } : {}
 
-    return this.apiService.postServiceCall<PlanResponse>(url, {
-      destination: message,
-      days: days
-    });
+    return this.apiService.postServiceCall(url, queryParams);
   }
 }

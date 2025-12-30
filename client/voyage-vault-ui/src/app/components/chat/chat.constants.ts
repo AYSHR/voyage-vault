@@ -1,5 +1,6 @@
 export interface PlanResponse {
-  landmarks: string[];
+  landmark: string;
+  coordinates: [ number, number ];
 }
 
 export interface Message {
@@ -11,7 +12,8 @@ export interface Message {
 export const INITIAL_MESSAGE: Message[] = [
   {
     sender: 'bot',
-    content: 'Hello! How can I assist you today?',
+    content: `Hey there, Voyager !!! \nWhere's your next quest? 🌎️✈️🌴 Spill the location, ` +
+      `and I'll craft a perfect itinerary packed with magic from our vault! ✨📜`,
     timestamp: '',
   }
 ];

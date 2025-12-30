@@ -1,11 +1,23 @@
 .navbar {
   display: flex;
   justify-content: space-between;
-  height: 30px;
+  align-items: center;
   padding: 0.625rem 1.25rem;
+  border-bottom: 1px solid var(--border-secondary);
+
+  .home {
+    margin: 0;
+    color: var(--text-primary);
+  }
 
   .actions {
     display: flex;
+    align-items: center;
     gap: 1.25rem;
+
+    .actionButton {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
   }
 }
